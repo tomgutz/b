@@ -104,7 +104,7 @@
     //returns.  (r.js 1.0.8+)
     //- "standard.keepComments.keepLines": keeps the file comments and line
     //returns. (r.js 1.0.8+)
-    optimizeCss: "standard.keepLines",
+    optimizeCss: "standard",
 
     //If optimizeCss is in use, a list of of files to ignore for the @import
     //inlining. The value of this option should be a comma separated list
@@ -363,7 +363,7 @@
     //called dirExclusionRegExp before the 1.0.2 release.
     //As of 1.0.3, this value can also be a string that is converted to a
     //RegExp via new RegExp().
-    fileExclusionRegExp: /^\.|build|server|node_modules|Cakefile|package\.json|run/,
+    fileExclusionRegExp: /^\.|build|server|node_modules|Cakefile|package\.json|run|.*\.styl/,
 
     //By default, comments that have a license in them are preserved in the
     //output. However, for a larger built files there could be a lot of

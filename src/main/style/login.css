@@ -1,0 +1,64 @@
+@import 'application.css';
+.icon-welcomeLogo {
+  background: url("../images/icons.png") no-repeat 0 -360px;
+  width: 364px;
+  height: 240px;
+}
+form#login {
+  text-align: center;
+  width: 460px;
+  display: inline-block;
+  vertical-align: middle;
+}
+form#login .icon-welcomeLogo {
+  margin: 0 auto;
+}
+form#login h2 {
+  color: #5d5d5d;
+  text-shadow: 1px 1px 1px #fff;
+  padding-top: 30px;
+}
+form#login h6 {
+  color: #b7b7b7;
+  padding-bottom: 30px;
+}
+form#login input {
+  display: inline;
+}
+form#login input[type=text] {
+  width: 175px;
+}
+form#login input[type=password] {
+  width: 145px;
+  margin: 0 4px 0 4px;
+}
+form#login input[type=checkbox] {
+  display: inline;
+  float: right;
+  margin-left: 4px;
+}
+form#login label {
+  display: inline;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .v-align:before {
+    display: none;
+  }
+  form#login {
+    text-align: left;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  form#login h2 {
+    padding-top: 10px;
+  }
+  form#login h6 {
+    padding: 0 0 20px 0;
+  }
+  form#login input:not([type=checkbox]) {
+    display: block;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+  }
+}
