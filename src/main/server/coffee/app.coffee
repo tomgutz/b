@@ -6,7 +6,7 @@ app.configure ->
 	app.use express.methodOverride()
 	app.use express.bodyParser()
 	app.use app.router
-	app.use express.static "#{__dirname}/../../temp"
+	app.use express.static "#{__dirname}/../../"
 
 app.listen 3000
 console.log 'server started'

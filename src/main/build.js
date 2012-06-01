@@ -104,7 +104,7 @@
     //returns.  (r.js 1.0.8+)
     //- "standard.keepComments.keepLines": keeps the file comments and line
     //returns. (r.js 1.0.8+)
-    optimizeCss: "standard",
+    optimizeCss: "standard.keepLines",
 
     //If optimizeCss is in use, a list of of files to ignore for the @import
     //inlining. The value of this option should be a comma separated list
@@ -218,7 +218,7 @@
     //normalize() method). In those cases, an AMD loader just needs to know
     //that the module has a definition. These small stubs can be used instead of
     //including the full source for a plugin.
-    stubModules: ['cs'],
+    stubModules: ['cs', 'hbs'],
 
     //If it is not a one file optimization, scan through all .js files in the
     //output directory for any plugin resource dependencies, and if the plugin

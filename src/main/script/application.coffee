@@ -17,8 +17,9 @@ define [
 	'jquery'
 	'underscore'
 	'backbone'
- 	'cs!chaplin'
-], ($, _, Backbone, chaplin) ->
+	'cs!chaplin'
+	'hbs!template/test'
+], ($, _, Backbone, chaplin, testTemplate) ->
 	
 	class MyApplication
 		initialize: ->

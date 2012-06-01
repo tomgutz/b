@@ -1,6 +1,6 @@
 @import 'application.css';
 .icon-welcomeLogo {
-  background: url("../images/icons.png") no-repeat 0 -360px;
+  background: url("../asset/images/icons.png") no-repeat 0 -360px;
   width: 364px;
   height: 240px;
 }
