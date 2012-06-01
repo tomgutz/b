@@ -1,0 +1,54 @@
+// nib is a powerful lib for stylus that provides cross-browser css3 mixins.
+// No more vendor prefixes. http://visionmedia.github.com/nib/
+@import 'nib'
+
+// Apply a natural box layout model to all elements.
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+*
+	box-sizing: border-box
+	transition: 0.3s ease-in-out
+	
+html, body
+	height: 100%
+
+body
+	background: #eee
+	
+.v-align
+	text-align: center
+	height: 100%
+	&:before
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+	
+// overides foundation.css, but in the future, this is what we want too
+form.nice div.form-field input, form.nice input.input-text, form.nice textarea
+	background: none
+	border: none
+	border-bottom: solid 1px #f7f7f7
+	border-radius: 4px
+	box-shadow: inset 0 0 0.4em #d0d0d0
+	font: 14px/1
+	padding: 9px 6px
+	color: #3c3c3c
+	outline: none !important
+	
+form.nice div.form-field input:focus, form.nice input.input-text:focus, form.nice textarea:focus
+	background-color: #f9f9f9
+	
+form.nice div.form-field input::-webkit-input-placeholder, form.nice input.input-text::-webkit-input-placeholder, form.nice textarea::-webkit-input-placeholder
+	color: #b7b7b7
+	text-shadow: 1px 1px 1px white
+	
+form.nice div.form-field input:-moz-placeholder, form.nice input.input-text:-moz-placeholder, form.nice input.input-text:-moz-placeholder, form.nice div.form-field input::-webkit-input-placeholder, form.nice input.input-text::-webkit-input-placeholder, form.nice textarea::-webkit-input-placeholder
+	color: #b7b7b7
+	text-shadow: 1px 1px 1px white
+
+/* Text input and textarea, disabled */
+form.nice div.form-field input[disabled], form.nice input.input-text[disabled], form.nice textarea[disabled]
+	box-shadow: none
+	background: rgba(0,0,0,.02)
+	border: inset 1px solid rgba(0,0,0,.075)
+
