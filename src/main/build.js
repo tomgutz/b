@@ -155,6 +155,11 @@
     //compiler is no longer needed. In that case, pragmasOnSave would be used
     //to exclude the compiler code during the save phase.
     pragmasOnSave: {
+        //NOTE: for Developer build keep all these parameters to false. So succesive builds will not fail.
+        //      For Production build  you can have them as true so these dependencies does not get injected 
+        //      to the resulting JS file. However it only works for the initial build. If you run a production
+        //      build without removing the previous build dir, it will fail.
+
         //removes Handlebars.Parser code (used to compile template strings) set
         //it to `false` if you need to parse template strings even after build
         excludeHbsParser : true,
