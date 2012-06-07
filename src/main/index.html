@@ -16,7 +16,7 @@
 	<script src="vendor/script/modernizr.foundation.js"></script>
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="vendor/style/ie/ie.css">
+		<link rel="stylesheet" href="stylesheets/ie/ie.css">
 	<![endif]-->
 
 	<!-- IE Fix for HTML5 Tags -->
@@ -24,9 +24,15 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	<script data-main="script/initialize" src="vendor/script/require.js"></script>
+	<!--
+	<script src="javascripts/vendor.js"></script>
+	<script src="javascripts/app.js"></script>
+	<script>require('initialize');</script>
+	-->
 </head>
 <body>
+	<div id="demo-app-container">Holy cow!</div>
+	<script data-main="script/initialize" src="vendor/script/require.js"></script>
 	<div class="v-align">
 		<form id="login" action="#" method="post" class="nice">
 			<!-- <img src="images/logo.png" /> -->
