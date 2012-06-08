@@ -14,6 +14,7 @@
 	<title>HPUI</title>
 	<link rel="stylesheet" href="style/login.css">
 	<script src="vendor/script/modernizr.foundation.js"></script>
+<!-- 	// <script type="text/javascript" src="vendor/script/i18next-1.3.1.js"></script> -->
 
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="stylesheets/ie/ie.css">
@@ -31,13 +32,14 @@
 	-->
 </head>
 <body>
-	<div id="demo-app-container">Holy cow!</div>
-	<script data-main="script/initialize" src="vendor/script/require.js"></script>
+
+	<div id="demo-app-container">Holy cow!</div>asdadad
+	
 	<div class="v-align">
 		<form id="login" action="#" method="post" class="nice">
 			<!-- <img src="images/logo.png" /> -->
 			<div class="icon-welcomeLogo"></div>
-			<h2>Enterprise Cloud</h2>
+			<h2 id="appName" />
 			<h6>Fuse pouere arcu eros rhoncus sagittis. Lorem ipsum dolor sit amet, consec telur adipi scing elit.</h6>
 			<input type="text" placeholder="Username" name="username" class="input-text" tabindex="1" />
 			<input type="password" placeholder="Password" name="password" class="input-text" tabindex="2" />
@@ -46,5 +48,6 @@
 			<label for="rememberMe">Remember Me</label>
 		</form>
 	</div>
+	<script data-main="script/initialize" src="vendor/script/require.js"></script>
 </body>
 </html>

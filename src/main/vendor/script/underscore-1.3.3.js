@@ -1056,4 +1056,16 @@
     return this._wrapped;
   };
 
+
+  // AMD define happens at the end for compatibility with AMD loaders
+  // that don't enforce next-turn semantics on modules.
+  // ----
+  // define as unnamed module so it can be easily removed after build
+  // without affecting other modules
+  // if (typeof define === 'function' && define.amd) {
+  //   define(function() {
+  //     return _;
+  //   });
+  // }
+
 }).call(this);

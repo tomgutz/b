@@ -4,49 +4,46 @@ require.config({
 		// for require-cs
 		'cs': '../vendor/script/cs',
 		'CoffeeScript': '../vendor/script/CoffeeScript',
-		
+
 		// for require-handlebars
 		'hbs': '../vendor/script/hbs',
-		'Handlebars' : '../vendor/script/Handlebars',
-		// './hbs/underscore': '../vendor/script/underscore-1.3.3',
-
+		'Handlebars': '../vendor/script/Handlebars',
 		// libs
 		'jquery': '../vendor/script/jquery-1.7.2',
 		'underscore': '../vendor/script/underscore-1.3.3',
 		'backbone': '../vendor/script/backbone-0.9.2',
 		'handlebars': '../vendor/script/Handlebars',
 		'foundation': '../vendor/script/foundation',
+		'i18next': '../vendor/script/i18next-1.3.1',
 		'chaplin': '../vendor/script/chaplin'
 	},
-	
-	
-	
+
 	shim: {
-		'backbone': ['underscore', 'jquery'],
-		'foundation': ['jquery']
+		'underscore': {
+			exports: '_'
+		},
+
+		'backbone': {
+			deps: ['underscore', 'jquery'],
+			exports: 'Backbone'
+		},
+		'foundation': {
+			deps: ['jquery']
+		}
 	},
-	
-    hbs : {
-        templateExtension : 'hbs',
-        // if disableI18n is `true` it won't load locales and the i18n helper
-        // won't work as well.
-        disableI18n : true
-    }
+
+	hbs: {
+		templateExtension: 'hbs',
+		disableI18n: true
+	}
 });
 
-// require(['jquery',	'underscore',	'backbone',		'handlebars',	'cs!application', 'foundation'],
-// function($,			_,				Backbone,		Handlebars,		app) {
-// 	console.log('test');
-// });
 
-
-require(['jquery',	'underscore',	'foundation', 'hbs!template/test'],
-	function($,			_,		foundation,	 test) {
-		console.log('test');
-		var container = document.getElementById('demo-app-container');
-		// Run your template function, and inject it.
-		  container.innerHTML = test({
-		    name : 'HPUI'
-		  });
-
+require(['jquery', 'underscore', 'foundation', 'hbs!template/test'], function($, _, foundation, test) {
+	console.log('test');
+	var container = document.getElementById('demo-app-container');
+	// Run your template function, and inject it.
+	container.innerHTML = test({
+		name: 'Any'
+	});
 });
