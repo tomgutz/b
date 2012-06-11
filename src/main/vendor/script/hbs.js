@@ -7,7 +7,7 @@ for              details               on              the               plugin 
 define: false, process: false, window: false */  
 define([
 //>>excludeStart('excludeHbs', pragmas.excludeHbs)
-'Handlebars', 'underscore', './hbs/i18nprecompile', './hbs/json2'
+'Handlebars', 'hbs/underscore', './hbs/i18nprecompile', './hbs/json2'
 //>>excludeEnd('excludeHbs')
 ], function (
 //>>excludeStart('excludeHbs', pragmas.excludeHbs)

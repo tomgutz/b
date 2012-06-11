@@ -8,6 +8,9 @@ require.config({
 		// for require-handlebars
 		'hbs': '../vendor/script/hbs',
 		'Handlebars': '../vendor/script/Handlebars',
+		// This AMDfied underscore is exclusively for compiling handlebars plugin
+		'hbs/underscore' : '../vendor/script/hbs/underscore-1.3.3-amd',
+
 		// libs
 		'jquery': '../vendor/script/jquery-1.7.2',
 		'underscore': '../vendor/script/underscore-1.3.3',

@@ -162,11 +162,11 @@
 
         //removes Handlebars.Parser code (used to compile template strings) set
         //it to `false` if you need to parse template strings even after build
-        excludeHbsParser : false,
+        excludeHbsParser : true,
         // kills the entire plugin set once it's built.
-        excludeHbs: false,
+        excludeHbs: true,
         // removes i18n precompiler, handlebars and json2
-        excludeAfterBuild: false
+        excludeAfterBuild: true
 
         //Just an example
         //excludeCoffeeScript: true
