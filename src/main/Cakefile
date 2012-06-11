@@ -20,16 +20,19 @@ task 'build', 'Build all + package', (options) ->
 			'./style/*/(.+?).styl$': (matches) -> compileStylus matches[0]
 			'./server/coffee/(.+)?.coffee$': (matches) -> muffin.compileScript matches[0], "./server/javascript/#{matches[1]}.js", options
 		before: ->
-			fs.rmrfSync build, (err) ->
-				console.log err if err?.errno isnt 34
-			if not path.existsSync "./#{build}"
-				fs.mkdirSync "./#{build}"
-			if not path.existsSync "./#{build}/style/"
-				fs.mkdirSync "./#{build}/style/"
+			invoke "clean"
 		after: ->
 			q = muffin.exec 'node ./node_modules/requirejs/bin/r.js -o build.js'
 			Q.when q[1], outputResult
-	
+
+task 'clean', 'Remove the build directory', (options) ->
+	if !!process.platform.match(/^win/)
+		wrench = require 'wrench'
+		wrench.rmdirSyncRecursive build, true
+	else
+		fs.rmrfSync build, (err) ->
+			console.log err if err?.errno isnt 34
+
 compileStylus = (source) ->
 	q = muffin.exec "node ./node_modules/stylus/bin/stylus -u ./node_modules/nib/lib/nib #{source}"
 	Q.when q[1], outputResult
